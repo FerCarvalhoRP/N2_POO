@@ -1,0 +1,26 @@
+@startuml
+
+Matrícula Universidade
+
+Class Inscrição{
+- nome: String
+- obrenome: String
+- Idade: String
+- Cpf: String
+- Endereco: String
+- Cidade: String
+- Ingresso: String
+- Curso: String
++ construtor (nome, sobrenome, idade, cpf, endereco, cidade, Ingresso, curso)
+}
+
+Class Matrícula {
+- Matrícula: String
+- Campus: String
+- Grade curricular: String
+- Início do curso: data
++ construtor (Matrícula, Campus, Grade curricular, Início do curso)
+
+}
+
+@enduml
