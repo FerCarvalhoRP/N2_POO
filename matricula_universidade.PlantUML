@@ -3,36 +3,44 @@
 Class Inscrição {
 + nome: String
 + Sobrenome: String
-- Idade: String
+- Data de Nascimento: data
 - Cpf: String
 - Endereco: String
 - Cidade: String
 + Ingresso: String
 + Curso: String
-+ construtor (nome, sobrenome, idade, cpf, endereco, cidade, Ingresso, curso)
++ construtor (nome, sobrenome, Data de Nascimento, cpf, endereco, cidade, Ingresso, curso)
++ Obter Inscrição ()
+
 }
 
 Class Notas {
-- Vestibular:
-- Redacao:
-- Entrevista:
+- Vestibular: integer = 6
+- Redacao: String
+- Entrevista: String
++ Status: String
 + construtor (Vestibular, Redacao, Entrevista)
++ Exibir Status ()
 }
 
 Class Matrícula {
-+ Matrícula: String
++ Numero: integer
 + Campus: String
 + Grade curricular: String
 + Início do curso: data
-+ construtor (Matrícula, Campus, Grade curricular, Início do curso)
++ construtor (Numero, Campus, Grade curricular, Início do curso)
 }
 
 Class Disciplinas {
-+ Disciplina:
-+ Semestre:
-+ Turno:
-+ Professor:
++ Disciplina: String
++ Semestre: String
++ Turno: String
++ Professor: String
 + construtor (Disciplina, Semestre, Turno, Professor)
 }
+
+Inscrição --> Notas : Inscrição depende da Nota
+Notas --> Matrícula
+Matrícula --> Disciplinas
 
 @enduml
